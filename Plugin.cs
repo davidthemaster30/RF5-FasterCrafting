@@ -1,12 +1,12 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
-using BepInEx.IL2CPP;
+using BepInEx.Unity.IL2CPP;
 using HarmonyLib;
 
 namespace FasterCrafting;
 
 [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
-public partial class Plugin : BasePlugin
+public class FasterCraftingPlugin : BasePlugin
 {
 	internal static new ManualLogSource Log = BepInEx.Logging.Logger.CreateLogSource("FasterCrafting");
 	public override void Load()

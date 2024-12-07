@@ -1,11 +1,8 @@
 namespace FasterCrafting;
 
-public partial class Plugin
+internal enum SynthMode
 {
-    public enum SynthMode
-	{
-		NONE,
-		CRAFT,
-		UPGRADE
-	}
+	NONE,
+	CRAFT,
+	UPGRADE
 }
