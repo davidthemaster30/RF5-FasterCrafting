@@ -11,10 +11,11 @@ public class FasterCraftingPlugin : BasePlugin
 	internal static new ManualLogSource Log = BepInEx.Logging.Logger.CreateLogSource("FasterCrafting");
 	public override void Load()
 	{
-		// Plugin startup logic
-		Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
-
+		Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_NAME} {MyPluginInfo.PLUGIN_VERSION} is loading!");
+		
 		Harmony.CreateAndPatchAll(typeof(FasterCraft));
 		Harmony.CreateAndPatchAll(typeof(Warper));
+
+		Log.LogInfo($"Plugin {MyPluginInfo.PLUGIN_NAME} {MyPluginInfo.PLUGIN_VERSION} is loaded!");
 	}
 }
